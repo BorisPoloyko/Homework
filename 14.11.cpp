@@ -125,19 +125,20 @@ char inputSymbol()
 		cout << "Invalid symbol!\nSymbol = ";
 		cin >> symbol;
 	}
-	if (symbol >= 97 || symbol <= 102)
+	if (symbol >= 97 && symbol <= 102)
 	{
 		return symbol - 87;
 	}
-	if (symbol >= 65 || symbol <= 70)
+	if (symbol >= 65 && symbol <= 70)
 	{
 		return symbol - 55;
 	}
-	if (symbol >= 48 || symbol <= 57)
+	if (symbol >= 48 && symbol <= 57)
 	{
 		return symbol - 48;
 		
 	}
+	return 0;
 }
 
 void numberOfSymbols(int n, char symbol)
