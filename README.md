@@ -3,7 +3,7 @@
 
 [27.09.2018. Accuracy of square root](https://github.com/BorisPoloyko/Homework/blob/master/04.10.Example(debt).cpp)
 
-[04.10.2018. Sin](https://github.com/BorisPoloyko/Homework/blob/master/04.10.sin.cpp),[cos](https://github.com/BorisPoloyko/Homework/blob/master/04.10.cos.cpp)
+[04.10.2018. Sin](https://github.com/BorisPoloyko/Homework/blob/master/04.10.sin.cpp),[ cos](https://github.com/BorisPoloyko/Homework/blob/master/04.10.cos.cpp)
 
 [17.10.2018. Sums](https://github.com/BorisPoloyko/Homework/blob/master/17.10.Sums1(2.0).cpp)
 
