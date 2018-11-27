@@ -1,6 +1,8 @@
 # Homework
 [Library](https://github.com/BorisPoloyko/Homework/blob/master/Library.h)
 
+[24.10.2018. Sums] (https://github.com/BorisPoloyko/Homework/blob/master/24.10.Sums.cpp)
+
 [31.10.2018. Fibonacci numbers](https://github.com/BorisPoloyko/Homework/blob/master/31.10.Fibonacci.cpp) and [prime numbers](https://github.com/BorisPoloyko/Homework/blob/master/31.10.PrimeNumber.NumberOfDigits.cpp)
 
 [14.11.2018. Symbols in an array](https://github.com/BorisPoloyko/Homework/blob/master/14.11.cpp)
