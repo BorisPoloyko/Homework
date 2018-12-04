@@ -1,5 +1,7 @@
 # Homework
-[Library](https://github.com/BorisPoloyko/Homework/blob/master/Library.h)
+[string.h](https://github.com/BorisPoloyko/Homework/blob/master/string.h)
+
+[Library.h](https://github.com/BorisPoloyko/Homework/blob/master/Library.h)
 
 [27.09.2018. Accuracy of square root](https://github.com/BorisPoloyko/Homework/blob/master/04.10.Example(debt).cpp)
 
