@@ -16,7 +16,7 @@ int substringPosition(char*, char*);
 int getLength(char* source)
 {
 	int length = 0;
-	while (source[length]) //равносильно  while(source[length]!= '\0')
+	while (source[length]) //Г°Г ГўГ­Г®Г±ГЁГ«ГјГ­Г®  while(source[length]!= '\0')
 	{
 		length++;
 	}
@@ -77,7 +77,7 @@ char toUpper(char symbol)
 	return symbol;
 }
 
-int substringPosotion(char* string, char* substring)
+int substringPosition(char* string, char* substring)
 {
 	int n = getLength(string),
 		m = getLength(substring);
