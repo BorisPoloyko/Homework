@@ -26,7 +26,7 @@ bool isLetter(char symbol)
 int getLength(char* source)
 {
 	int length = 0;
-	while (source[length]) //равносильно  while(source[length]!= '\0')
+	while (source[length]) //Г°Г ГўГ­Г®Г±ГЁГ«ГјГ­Г®  while(source[length]!= '\0')
 	{
 		length++;
 	}
@@ -37,7 +37,7 @@ int getLength(char* source)
 void newStringOfWords(char* string) 
 {
 	char newString[100][100];
-	int nextLetter = 0, nextWord = 0, flag = 0;
+	int nextLetter = 0, nextWord = 0;
 	for (int i = 0; i < getLength(string); i++)
 	{
 		if (isLetter(string[i]))
