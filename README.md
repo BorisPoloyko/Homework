@@ -21,4 +21,4 @@
 
 [28.11.2018. Strings](https://github.com/BorisPoloyko/Homework/blob/master/28.11.cpp)
 
-[05.12.2018. String(finding index, string replacement, etc.)](https://github.com/BorisPoloyko/Homework/blob/master/05.12.cpp)
+[05.12.2018. String(array of words, string replacement, etc.)](https://github.com/BorisPoloyko/Homework/blob/master/05.12.cpp)
