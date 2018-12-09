@@ -6,18 +6,24 @@ bool isLetter(char);
 void arrayOfWords(char*, char[100][100]);
 int getLength(char*);
 int substringPosition(char*, char*, int);
-void stringReplacement(char*, char*, char*, char*);
+void stringReplacement(char*, char*, char*, char*); //I decided to make a separate array to contain new changed string
+void stringErase(char*, char*);
 void displayArray(char*);
 
 int main()
 {
-	char string[25] = "Hello, hello, hetll";
-	char toBeReplaced[3] = "ll";
-	char replace[5] = "abc";
-	char newString[30] = { '\0' };
-	stringReplacement(string, toBeReplaced, replace, newString);
-	displayArray(newString);
-
+	char string1[25] = "Hello,hello, lll";
+	char erase[3] = "ll";
+	stringErase(string1, erase);
+	displayArray(string1); //result: "Heo, heo, l"
+	
+	char string2[25] = "Hello,hello, lll";
+	char toBeReplaced[5] = "ello";
+	char replace[2] = "i";
+	char newString[30] = {};
+	stringReplacement(string2, toBeReplaced, replace, newString);
+	displayArray(newString); //result: "Hi, hi, lll";
+	
 	system("pause");
 }
 
@@ -137,6 +143,20 @@ void stringReplacement(char* string, char* toBeReplaced, char* replace, char* ne
 
 		index = substringPosition(string, toBeReplaced, start);
 		count++;
+	}
+}
+
+void stringErase(char* string, char* erase)
+{
+	int sLength = getLength(string), eraseLength = getLength(erase);
+	int index = substringPosition(string, erase, 0);
+	while (index != -1)
+	{
+		for (int i = index, j = index + eraseLength; i < sLength; i++, j++)
+		{
+			string[i] = string[j];
+		}
+		index = substringPosition(string, erase, 0);
 	}
 }
 
