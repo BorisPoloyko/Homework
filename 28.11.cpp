@@ -145,7 +145,7 @@ int indexOfSubstring(char* string, int n, char* substring, int m)
 	{
 		return -1;
 	}
-	int count = 0, index = 0;
+	int count = 0, index = -1;
 	for(int i = 0;i<n;i++)
 	{
 		for (int j = 0;j<m; j++)
