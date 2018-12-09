@@ -165,6 +165,7 @@ int indexOfSubstring(char* string, int n, char* substring, int m)
 			}
 			else
 			{
+				index = -1;
 				count = 0;
 				break;
 			}
