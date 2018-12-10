@@ -23,4 +23,4 @@
 
 [05.12.2018. String(array of words, string replacement, etc.)](https://github.com/BorisPoloyko/Homework/blob/master/05.12.cpp)
 
-[12.12.2018. Matrix](https://github.com/BorisPoloyko/Homework/blob/master/12.12.cpp)
+[12.12.2018. Matrix](https://github.com/BorisPoloyko/Homework/blob/master/12.12.cpp) (Не хватает времени, чтобы сделать до конца, обязательно доделаю)
