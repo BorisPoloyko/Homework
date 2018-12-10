@@ -4,30 +4,45 @@ using namespace std;
 const int M = 100;
 void swap(int&, int&);
 void initMatrix(int[][M], int, int);
+void initZeroMatrix(int[][M], int, int);
 void displayMatrix(int[][M], int, int);
 void transpose(int[][M], int);
+
 void initMatrix(int a[][M], int n, int m)
 {
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < m; j++)
 		{
-			//cout << "a[" << i + 1 << "," << j + 1 << "] = ";
-			//cin >> a[i][j];
-			a[i][j] = i + 1;
+			
+			
+			a[i][j] = 0;
 		}
 	}
 }
-void displayMatrix(int a[][M], int n, int m)
+
+void initZeroMatrix(int a[][M], int n, int m)
 {
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < m; j++)
 		{
-			cout.width(5);
-			cout << a[i][j];
+
+
+			a[i][j] = 0;
 		}
-		cout << endl;
+	}
+}
+void initMatrix(int a[][M], int n, int m)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			cout << "a[" << i + 1 << "," << j + 1 << "] = ";
+			cin >> a[i][j];
+			a[i][j] = i + 1;
+		}
 	}
 }
 void transpose(int a[][M], int n)
@@ -67,17 +82,17 @@ void createKeys(int a[][M], int n, int m, int* keys)
 		keys[i] = findMax(a[i], m);
 	}
 }
-int findMax(int* array, int n)
+int findMax(int* matrixay, int n)
 {
 	int k = 0;
 	for (int j = 1; j < n; j++)
 	{
-		if (array[j] > array[k])
+		if (matrixay[j] > matrixay[k])
 		{
 			k = j;
 		}
 	}
-	return array[k];
+	return matrixay[k];
 }
 void bubbleSort(int matrix[][M], int* keys, int n, int m)
 {
