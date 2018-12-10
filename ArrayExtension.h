@@ -8,18 +8,7 @@ void initZeroMatrix(int[][M], int, int);
 void displayMatrix(int[][M], int, int);
 void transpose(int[][M], int);
 
-void initMatrix(int a[][M], int n, int m)
-{
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = 0; j < m; j++)
-		{
-			
-			
-			a[i][j] = 0;
-		}
-	}
-}
+
 
 void initZeroMatrix(int a[][M], int n, int m)
 {
