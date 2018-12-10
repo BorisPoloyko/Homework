@@ -15,7 +15,7 @@ int main()
 	switch (task)
 	{
 	case 'a':
-		initMatrix(matrix, n, n);     //matrix with all 0-elements 
+		initZeroMatrix(matrix, n, n);     //matrix with all 0-elements 
 		for (int i = 0; i < n; i++)
 		{
 			for (int j = i; j >= 0; j--)
@@ -26,7 +26,7 @@ int main()
 		displayMatrix(matrix, n, n);
 		break;
 	case 'b':
-		initMatrix(matrix, n, n);
+		initZeroMatrix(matrix, n, n);
 		for (int i = 0; i < n; i++)
 		{
 			for (int j = 0; j < n; j++)
@@ -49,7 +49,7 @@ int main()
 		displayMatrix(matrix, n, n);
 		break;
 	case 'c':
-		initMatrix(matrix, n, n);
+		initZeroMatrix(matrix, n, n);
 		for (int i = 0; i < (n + 1) / 2; i++)
 		{
 			for (int j = 0; j < i + 1; j++)
@@ -68,7 +68,7 @@ int main()
 		displayMatrix(matrix, n, n);
 		break;
 	case 'd':
-		initMatrix(matrix, n, n);
+		initZeroMatrix(matrix, n, n);
 		for (int i = 0; i < (n + 1) / 2; i++)
 		{
 			matrix[i][i] = i + 1;
