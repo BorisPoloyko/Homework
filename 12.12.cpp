@@ -11,7 +11,7 @@ int main()
 	int matrix[M][M] = { { 0 } };
 	int n = inputParameter();
 	char task = inputNumber();
-
+//№3
 	switch (task)
 	{
 	case 'a':
