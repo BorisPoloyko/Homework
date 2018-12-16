@@ -34,6 +34,20 @@ void initMatrix(int a[][M], int n, int m)
 		}
 	}
 }
+
+void displayMatrix(int a[][M], int n, int m)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			cout.width(5);
+			cout << a[i][j];
+		}
+		cout << endl;
+	}
+}
+
 void transpose(int a[][M], int n)
 {
 	for (int i = 0; i < n; i++)
