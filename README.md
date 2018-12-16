@@ -23,4 +23,4 @@
 
 [05.12.2018. String(array of words, string replacement, etc.)](https://github.com/BorisPoloyko/Homework/blob/master/05.12.cpp)
 
-12.12.2018. Matrix [№3](https://github.com/BorisPoloyko/Homework/blob/master/12.12.cpp), [№4](https://github.com/BorisPoloyko/Homework/blob/master/12.12(%E2%84%964).cpp) 
+12.12.2018. Matrix [№3](https://github.com/BorisPoloyko/Homework/blob/master/12.12.cpp), [№4](https://github.com/BorisPoloyko/Homework/blob/master/12.12(%E2%84%964).cpp), [№7+№8](https://github.com/BorisPoloyko/Homework/blob/master/12.12(%E2%84%967%2C8).cpp)
