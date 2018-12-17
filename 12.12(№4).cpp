@@ -5,7 +5,7 @@ using namespace std;
 
 int inputParameter();
 void inputA_n(int*, int);
-void matrixFilling(int matrix[100][100], int*a_n, int N);
+void matrixFilling(int matrix[100][100], int*, int);
 
 int main()
 {
