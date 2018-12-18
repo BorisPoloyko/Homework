@@ -131,7 +131,11 @@ void pushRightArray(int* a,int pos, int length)
 {
 	int end[100];
 	int temp[100];
-	
+	while (pos > length)
+	{
+		pos -= length;
+	}
+
 	for (int i = length - pos, j = 0; i < length; i++, j++)
 	{
 		end[j] = a[i];
