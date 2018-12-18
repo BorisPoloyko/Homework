@@ -5,6 +5,8 @@ const int M = 100;
 void inputArray(int* , int);
 void displayArray(int*, int;
 void swap(int&, int&);
+void bubbleSort(int*, int);
+void selectionSort(int*, int);
 void initMatrix(int[][M], int, int);
 void initZeroMatrix(int[][M], int, int);
 void displayMatrix(int[][M], int, int);
@@ -175,4 +177,41 @@ void pushRightArray(int* a,int pos, int length)
 		a[i] = end[j];
 	}
 
+}
+
+void bubbleSort(int * array, int n)
+{
+	bool swapped = true;
+	int i = 1;
+	while (swapped)
+	{
+		swapped = false;
+		for (int j = n - 1; j >= i; j--)
+		{
+			if (array[j] < array[j - 1])
+			{
+				swap(array[j], array[j - 1]);
+				swapped = true;
+			}
+		}
+		i++;
+	}
+}
+		  
+void selectionSort(int * array, int n)
+{
+	for (int i = 0; i < n - 1; i++)
+	{
+		int min = i;
+
+		for (int j = i + 1; j < n; j++)
+		{
+			if (array[min] > array[j])
+			{
+				min = j;
+			}
+		}
+
+		swap(array[min], array[i]);
+	}
 }
