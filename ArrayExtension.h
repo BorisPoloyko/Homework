@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std;
 const int M = 100;
+void inputArray(int* , int);
+void displayArray(int*, int;
 void swap(int&, int&);
 void initMatrix(int[][M], int, int);
 void initZeroMatrix(int[][M], int, int);
@@ -9,6 +11,22 @@ void displayMatrix(int[][M], int, int);
 void transpose(int[][M], int);
 void pushRightArray(int*, int, int);
 
+void inputArray(int* array, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << "[" << i + 1 << "] : ";
+		cin >> array[i];
+	}
+}
+
+void displayArray(int* array, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << array[i] << " ";
+	}
+}
 
 void initZeroMatrix(int a[][M], int n, int m)
 {
