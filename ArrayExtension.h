@@ -7,6 +7,7 @@ void displayArray(int*, int;
 void swap(int&, int&);
 void bubbleSort(int*, int);
 void selectionSort(int*, int);
+void insertionSort(int*,int);
 void initMatrix(int[][M], int, int);
 void initZeroMatrix(int[][M], int, int);
 void displayMatrix(int[][M], int, int);
@@ -213,5 +214,19 @@ void selectionSort(int * array, int n)
 		}
 
 		swap(array[min], array[i]);
+	}
+}
+		  
+void insertionSort(int* array,int dimension)
+{
+	int current, j;
+	for (int i = 1; i < dimension; i++)
+	{
+		current = array[i];
+		for (j = i - 1 ; array [j] > current; j--)
+		{
+			array[j + 1] = array[j];
+		}
+		array[j + 1] = current;
 	}
 }
