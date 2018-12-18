@@ -7,7 +7,7 @@ void initMatrix(int[][M], int, int);
 void initZeroMatrix(int[][M], int, int);
 void displayMatrix(int[][M], int, int);
 void transpose(int[][M], int);
-
+void pushRightArray(int*, int, int);
 
 
 void initZeroMatrix(int a[][M], int n, int m)
@@ -126,4 +126,31 @@ void swap(int left[], int right[], int n)
 	{
 		swap(left[i], right[i]);
 	}
+}
+void pushRightArray(int* a,int pos, int length)
+{
+	int end[100];
+	int temp[100];
+	
+	for (int i = length - pos, j = 0; i < length; i++, j++)
+	{
+		end[j] = a[i];
+	
+	}
+
+	
+	for (int j = 0; j < length - pos; j++)
+	{
+		temp[j] = a[j];
+	}
+	for (int i = pos, j = 0; i < length ; i++, j++)
+	{
+	
+		a[i] = temp[j];
+	}
+	for (int i = 0, j = 0; i < pos; i++, j++)
+	{
+		a[i] = end[j];
+	}
+
 }
