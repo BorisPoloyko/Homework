@@ -5,6 +5,8 @@
 
 [ArrayExtension.h](https://github.com/BorisPoloyko/Homework/blob/master/ArrayExtension.h)
 
+[Important Classwork](https://github.com/AnzhelikaKravchuk/2018-2019.MMF.BSU/blob/master/1%20course/1%20semester/21.11.2018/Source.cpp)
+
 [27.09.2018. Accuracy of square root](https://github.com/BorisPoloyko/Homework/blob/master/04.10.Example(debt).cpp)
 
 [04.10.2018. Sin](https://github.com/BorisPoloyko/Homework/blob/master/04.10.sin.cpp),[ cos](https://github.com/BorisPoloyko/Homework/blob/master/04.10.cos.cpp)
