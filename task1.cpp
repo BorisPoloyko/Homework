@@ -47,7 +47,7 @@ int nextSmallerThan(int number)
     bool count;
     for (int i = 0, diff = 1; power - diff - 1 >= 0; i++, diff++)
     {
-        if (digits[power - diff] < digits[power - diff - 1])
+        if (digits[power - diff] < digits[power - diff - i - 1]])
         {
             swap (digits[power - diff], digits[power - diff - 1]);
             count = false;
