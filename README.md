@@ -28,6 +28,7 @@
 12.12.2018. Matrix [№3](https://github.com/BorisPoloyko/Homework/blob/master/12.12.cpp), [№4](https://github.com/BorisPoloyko/Homework/blob/master/12.12(%E2%84%964).cpp), [№7+№8](https://github.com/BorisPoloyko/Homework/blob/master/12.12(%E2%84%967%2C8).cpp), [№9+№10](https://github.com/BorisPoloyko/Homework/blob/master/12.12(%E2%84%969,10).cpp), [№13](https://github.com/BorisPoloyko/Homework/blob/master/12.12(%E2%84%9613).cpp)
 
 Control work [Task 1](https://github.com/BorisPoloyko/Homework/blob/master/task1.cpp), [Task 2](https://github.com/BorisPoloyko/Homework/blob/master/Task2.cpp)
+
  #Semester 2
  20.02.2019 [Dynamic Array(1)(doubles)](https://github.com/BorisPoloyko/Homework/blob/master/%E2%84%961_20_02_19(1).cpp),
  [Dynamic Array(2)(integers)](https://github.com/BorisPoloyko/Homework/blob/master/%E2%84%961_20_02_19(2).cpp) + Header Files for [Array(doubles)](https://github.com/BorisPoloyko/Homework/blob/master/Array_double.h) and [array(integers)](https://github.com/BorisPoloyko/Homework/blob/master/Array_int.h)
