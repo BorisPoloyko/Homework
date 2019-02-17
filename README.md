@@ -1,4 +1,6 @@
-# Homework Semester 1
+# Homework 
+#Semester 1
+
 [string.h](https://github.com/BorisPoloyko/Homework/blob/master/string.h)
 
 [Library.h](https://github.com/BorisPoloyko/Homework/blob/master/Library.h)
@@ -30,5 +32,6 @@
 Control work [Task 1](https://github.com/BorisPoloyko/Homework/blob/master/task1.cpp), [Task 2](https://github.com/BorisPoloyko/Homework/blob/master/Task2.cpp)
 
  #Semester 2
+
  20.02.2019 [Dynamic Array(1)(doubles)](https://github.com/BorisPoloyko/Homework/blob/master/%E2%84%961_20_02_19(1).cpp),
  [Dynamic Array(2)(integers)](https://github.com/BorisPoloyko/Homework/blob/master/%E2%84%961_20_02_19(2).cpp) + Header Files for [Array(doubles)](https://github.com/BorisPoloyko/Homework/blob/master/Array_double.h) and [array(integers)](https://github.com/BorisPoloyko/Homework/blob/master/Array_int.h)
