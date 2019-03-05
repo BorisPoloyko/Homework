@@ -20,7 +20,7 @@ int numberZeroes(double);
 void swap(double&, double&);
 int inputNumberOfOnes();
 int inputNumberOfZeroes();
-int countNumber(double*,int,int, int);
+
 
 int ones = inputNumberOfOnes(), zeroes = inputNumberOfZeroes();
 
@@ -208,19 +208,3 @@ int inputNumberOfZeroes()
 		cout << "Invalid data! Try again, a =  ";
 	}
 }
-
-int countNumber(double* array, int n, int a, int b)
-{
-	int count = 0;
-	for (double *p = array; p < array + n; p++)
-	{
-		if ((numberOnes(*p) == a) && (numberZeroes(*p) == b)) 
-		{
-			count++;
-		}
-	}
-	return count;
-}
-
-
-
