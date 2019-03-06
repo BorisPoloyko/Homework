@@ -1,19 +1,19 @@
 #include "Array_double.h"
+#include "cmath"
 
 using namespace std;
 
 
 typedef bool(*predicate)(double, double);
-typedef void(*rule)(double&, double&);
 typedef bool(*conditionToIncludeOrDelete)(double, int, int);
 
-void sortArray(double*, int , predicate, rule);
+void sortArray(double*, int, predicate);     //Не успел сделать слиянием
 double* deleteElements(double*, int&, conditionToIncludeOrDelete);
 double* createArray(double*, int, int&, conditionToIncludeOrDelete);
 
 
 bool ifNumberOfOnesGreater(double, double);
-bool ifNumberFits(double,int, int);
+bool ifNumberFits(double, int, int);
 int inputSize();
 int numberOnes(double);
 int numberZeroes(double);
@@ -22,24 +22,26 @@ int inputNumberOfOnes();
 int inputNumberOfZeroes();
 
 
-int ones = inputNumberOfOnes(), zeroes = inputNumberOfZeroes();
+int n = inputSize(),ones = inputNumberOfOnes(), zeroes = inputNumberOfZeroes();
 
 int main()
 {
-	int n = inputSize(), lengthOfNewArray;
+	//Test cases: число 0 - 2, число 1 - 2 --> 7 5 -10 --> 5 -10 7 --> удалены -10--> массив 5 7
+	//			  число 0 - 2, число 1 - 2 --> 7 5 9 10--> 5 9 10 7--> удалены 9 10--> массив 5 7
+	int lengthOfNewArray;
 
 	double* array = allocateMemory(n);
 
 	inputArray(array, n);
-			
+
 	displayArray(array, n);
 
-	sortArray(array, n, ifNumberOfOnesGreater, swap);
+	sortArray(array, n, ifNumberOfOnesGreater);
 
 	cout << "Sorted array: ";
 
 	displayArray(array, n);
-	
+
 	double* new_array = createArray(array, n, lengthOfNewArray, ifNumberFits);
 
 	cout << "Copied elements:";
@@ -51,14 +53,14 @@ int main()
 	array = deleteElements(array, n, ifNumberFits);
 
 	displayArray(array, n);
-	
+
 	system("pause");
 
 	return 0;
 }
 
 
-void sortArray(double* array, int n, predicate condition, rule rule)
+void sortArray(double* array, int n, predicate condition)
 {
 	for (double *p = array; p < array + n; p++)
 	{
@@ -66,7 +68,7 @@ void sortArray(double* array, int n, predicate condition, rule rule)
 		{
 			if (condition(*p, *q))
 			{
-				rule(*p, *q);
+				swap(*p, *q);
 			}
 		}
 	}
@@ -153,9 +155,11 @@ int numberOnes(double a)
 {
 	int b = a;
 	int count = 0;
-	for (int i = 0; i < sizeof(b) * 8; i++, b >>= 1)
+	while (abs(b))
 	{
-		count += b & 1;
+		if (abs(b) % 2 == 1)
+			count++;
+		b /= 2;
 	}
 	return count;
 }
@@ -164,9 +168,11 @@ int numberZeroes(double a)
 {
 	int b = a;
 	int count = 0;
-	for (int i = 0; i < sizeof(b) * 8; i++, b >>= 1)
+	while (abs(b))
 	{
-		count += b ^ 1;
+		if (abs(b) % 2 == 0)
+			count++;
+		b /= 2;
 	}
 	return count;
 }
@@ -208,3 +214,5 @@ int inputNumberOfZeroes()
 		cout << "Invalid data! Try again, a =  ";
 	}
 }
+
+
