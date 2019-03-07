@@ -7,11 +7,20 @@ using namespace std;
 typedef bool(*predicate)(double, double);
 typedef bool(*conditionToIncludeOrDelete)(double, int, int);
 
-void sortArray(double*, int, predicate);     
+
+double* allocateMemory(int);     //functions from header file(just in case)
+void inputArray(double*, int);
+void displayArray(double*, int);
+void randomArray(double*, int);
+
+
+
+
+void sortArray(double*, int, predicate);							//bubble sort (just in case)
 double* deleteElements(double*, int&, conditionToIncludeOrDelete);
 double* createArray(double*, int, int&, conditionToIncludeOrDelete);
-void mergeSort(int*, int, int, predicate);
-void merge(int*, int, int, int, predicate);
+void mergeSort(double*, int, int, predicate);
+void merge(double*, int, int, int, predicate);
 
 
 
@@ -27,12 +36,15 @@ int inputNumberOfZeroes();
 
 
 
-int n = inputSize(),ones = inputNumberOfOnes(), zeroes = inputNumberOfZeroes();
+int n = inputSize(), ones = inputNumberOfOnes(), zeroes = inputNumberOfZeroes();
 
 int main()
 {
 	//Test cases: число 0 - 2, число 1 - 2 --> 7 5 -10 --> 5 -10 7 --> удалены -10--> массив 5 7
 	//			  число 0 - 2, число 1 - 2 --> 7 5 9 10--> 5 9 10 7--> удалены 9 10--> массив 5 7
+	//	          число 0 - 2, число 1 - 3 --> 25 1 7.4 -5.6 9 5 --> 1 5 9 -5.6 7.4 25 -->удалены 25 --> массив 1 -5.6 9 5 7.4
+
+
 	int lengthOfNewArray;
 
 	double* array = allocateMemory(n);
@@ -41,7 +53,7 @@ int main()
 
 	displayArray(array, n);
 
-	sortArray(array, n, ifNumberOfOnesGreater);
+	mergeSort(array, 0, n-1, ifNumberOfOnesGreater);
 
 	cout << "Sorted array: ";
 
@@ -140,7 +152,6 @@ bool ifNumberOfOnesGreater(double a, double b)
 	return (numberOnes(a) > numberOnes(b));
 }
 
-
 int inputSize()
 {
 	int n;
@@ -220,41 +231,86 @@ int inputNumberOfZeroes()
 	}
 }
 
-void merge(int* array, int lb, int mid, int ub, predicate condition)
+void merge(double* array, int left, int mid, int right, predicate condition)
 {
-	int pos1 = lb, pos2 = mid + 1, pos3 = 0;
+	int pos1 = left, pos2 = mid + 1, pos3 = 0;
 
-	int *temp = allocateMemory(ub - lb + 1);
+	double *temp = allocateMemory(right - left + 1);
 
-	while (pos1 <= split && pos2 <= ub) {
-		if (condition(pos1,pos2))
+	while (pos1 <= mid && pos2 <= right) 
+	{
+		if (condition(array[pos2], array[pos1]))
+		{
 			temp[pos3++] = array[pos1++];
+		}
 		else
+		{
 			temp[pos3++] = array[pos2++];
+		}
 	}
- 
-	while (pos2 <= ub)  
-		temp[pos3++] = array[pos2++];
-	while (pos1 <= split)
-		temp[pos3++] = array[pos1++];
 
-	for (pos3 = 0; pos3 < ub - lb + 1; pos3++)
-		array[lb + pos3] = temp[pos3];
+	while (pos2 <= right)
+	{
+		temp[pos3++] = array[pos2++];
+	}
+	while (pos1 <= mid)
+	{
+		temp[pos3++] = array[pos1++];
+	}
+
+	for (pos3 = 0; pos3 < right - left + 1; pos3++)
+	{
+		array[left + pos3] = temp[pos3];
+	}
 
 	delete[] temp;
 }
 
-void mergeSort(int* array, int lb, int ub, predicate condition)
+void mergeSort(double* array, int left, int right, predicate condition)
 {
 	int mid;
 
-	if (lb < ub) {
-
-		mid = (lb + ub) / 2;
-
-		mergeSort(array, lb, mid, condition);     
-		mergeSort(array, mid + 1, ub, condition);
-		merge(array, lb, mid, ub, condition );
+	if (left < right)
+	{
+		mid = left + (right-left) / 2;
+		mergeSort(array, left, mid, condition);
+		mergeSort(array, mid + 1, right, condition);
+		merge(array, left, mid, right, condition);
 	}
 }
 
+double* allocateMemory(int n)
+{
+	if (n <= 0)
+	{
+		return nullptr;
+	}
+	double* array = new double[n];
+	return array;
+}
+
+void inputArray(double* array, int n)
+{
+	for (double * p = array, i = 1; p < array + n; p++, i++)
+	{
+		cout << "a [" << i << "] = ";
+		cin >> *p;
+	}
+}
+
+void displayArray(double* array, int n)
+{
+	for (double * p = array; p < array + n; p++)
+	{
+		cout << *p << " ";
+	}
+	cout << endl;
+}
+
+void randomArray(double* array, int n)
+{
+	for (double * p = array; p < array + n; p++)
+	{
+		*p = rand() % 20;
+	}
+}
