@@ -1,5 +1,6 @@
-#include "Array_double.h"
+#include <iostream>
 #include "cmath"
+
 
 using namespace std;
 
