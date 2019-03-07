@@ -277,6 +277,10 @@ void mergeSort(double* array, int left, int right, predicate condition)
 		mergeSort(array, mid + 1, right, condition);
 		merge(array, left, mid, right, condition);
 	}
+	else
+	{
+		return;
+	}
 }
 
 double* allocateMemory(int n)
