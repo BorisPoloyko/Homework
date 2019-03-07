@@ -1,6 +1,6 @@
+
 #include <iostream>
 #include "cmath"
-
 
 using namespace std;
 
@@ -54,7 +54,7 @@ int main()
 
 	displayArray(array, n);
 
-	mergeSort(array, 0, n-1, ifNumberOfOnesGreater);
+	mergeSort(array, 0, n - 1, ifNumberOfOnesGreater);
 
 	cout << "Sorted array: ";
 
@@ -170,7 +170,12 @@ int inputSize()
 
 int numberOnes(double a)
 {
+
 	int b = a;
+	if (b == 1)
+	{
+		return 0;
+	}
 	int count = 0;
 	while (abs(b))
 	{
@@ -184,6 +189,11 @@ int numberOnes(double a)
 int numberZeroes(double a)
 {
 	int b = a;
+
+	if (b == 0)
+	{
+		return 1;
+	}
 	int count = 0;
 	while (abs(b))
 	{
@@ -238,7 +248,7 @@ void merge(double* array, int left, int mid, int right, predicate condition)
 
 	double *temp = allocateMemory(right - left + 1);
 
-	while (pos1 <= mid && pos2 <= right) 
+	while (pos1 <= mid && pos2 <= right)
 	{
 		if (condition(array[pos2], array[pos1]))
 		{
@@ -273,7 +283,7 @@ void mergeSort(double* array, int left, int right, predicate condition)
 
 	if (left < right)
 	{
-		mid = left + (right-left) / 2;
+		mid = left + (right - left) / 2;
 		mergeSort(array, left, mid, condition);
 		mergeSort(array, mid + 1, right, condition);
 		merge(array, left, mid, right, condition);
@@ -282,6 +292,7 @@ void mergeSort(double* array, int left, int right, predicate condition)
 	{
 		return;
 	}
+	
 }
 
 double* allocateMemory(int n)
