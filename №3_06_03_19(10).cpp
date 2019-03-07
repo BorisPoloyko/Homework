@@ -174,7 +174,7 @@ int numberOnes(double a)
 	int b = a;
 	if (b == 1)
 	{
-		return 0;
+		return 1;
 	}
 	int count = 0;
 	while (abs(b))
