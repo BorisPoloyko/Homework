@@ -7,9 +7,12 @@ using namespace std;
 typedef bool(*predicate)(double, double);
 typedef bool(*conditionToIncludeOrDelete)(double, int, int);
 
-void sortArray(double*, int, predicate);     //Не успел сделать слиянием
+void sortArray(double*, int, predicate);     
 double* deleteElements(double*, int&, conditionToIncludeOrDelete);
 double* createArray(double*, int, int&, conditionToIncludeOrDelete);
+void mergeSort(int*, int, int, predicate);
+void merge(int*, int, int, int, predicate);
+
 
 
 bool ifNumberOfOnesGreater(double, double);
@@ -20,6 +23,8 @@ int numberZeroes(double);
 void swap(double&, double&);
 int inputNumberOfOnes();
 int inputNumberOfZeroes();
+
+
 
 
 int n = inputSize(),ones = inputNumberOfOnes(), zeroes = inputNumberOfZeroes();
@@ -215,4 +220,41 @@ int inputNumberOfZeroes()
 	}
 }
 
+void merge(int* array, int lb, int mid, int ub, predicate condition)
+{
+	int pos1 = lb, pos2 = mid + 1, pos3 = 0;
+
+	int *temp = allocateMemory(ub - lb + 1);
+
+	while (pos1 <= split && pos2 <= ub) {
+		if (condition(pos1,pos2))
+			temp[pos3++] = array[pos1++];
+		else
+			temp[pos3++] = array[pos2++];
+	}
+ 
+	while (pos2 <= ub)  
+		temp[pos3++] = array[pos2++];
+	while (pos1 <= split)
+		temp[pos3++] = array[pos1++];
+
+	for (pos3 = 0; pos3 < ub - lb + 1; pos3++)
+		array[lb + pos3] = temp[pos3];
+
+	delete[] temp;
+}
+
+void mergeSort(int* array, int lb, int ub, predicate condition)
+{
+	int mid;
+
+	if (lb < ub) {
+
+		mid = (lb + ub) / 2;
+
+		mergeSort(array, lb, mid, condition);     
+		mergeSort(array, mid + 1, ub, condition);
+		merge(array, lb, mid, ub, condition );
+	}
+}
 
