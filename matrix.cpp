@@ -8,6 +8,7 @@ typedef double(*operation)(double**,int);
 typedef bool(*condition)(double**, double**, int, operation);
 
 int inputSize();
+double inputAccuracy();
 double formula(int, int);
 double taylor(int , int);
 double msin(double, double);
@@ -20,7 +21,7 @@ double maxSumColumn(double**, int n);
 void compareSquareMatrix(double**, double**, int n, operation, condition);
 bool ifFirstMatrixGreater(double**, double**, int, operation);
 
-double acc = 0.1;
+double acc = inputAccuracy();
 
 int main()
 {
@@ -169,4 +170,19 @@ double msin(double from, double accuracy)
     }
     
     return sin;
+}
+
+double inputAccuracy()
+{
+    int n;
+    while (true)
+    {
+        cout << "Please enter the accuracy, acc = ";
+        cin >> n;
+        if (n > 0)
+        {
+            return n;
+        }
+        cout << "Invalid data! Try again, acc =  ";
+    }
 }
