@@ -19,7 +19,7 @@ double** buildSquareMatrixTaylor(double**,int);
 double** buildRandomMatrix(double**, int);
 double maxSumColumn(double**, int n);
 void compareSquareMatrix(double**, double**, int n, operation, condition);
-bool ifFirstMatrixGreater(double**, double**, int, operation);
+bool isFirstMatrixGreater(double**, double**, int, operation);
 
 double acc = inputAccuracy();
 
@@ -41,14 +41,14 @@ int main()
     
     displaySquareMatrix(matrixB, n);
     
-    compareSquareMatrix(matrixA, matrixB, n, maxSumColumn, ifFirstMatrixGreater);
+    compareSquareMatrix(matrixA, matrixB, n, maxSumColumn, isFirstMatrixGreater);
     
     system("pause");
     
     return 0;
 }
 
-bool ifFirstMatrixGreater(double** matrixA, double** matrixB, int n, operation operation)
+bool isFirstMatrixGreater(double** matrixA, double** matrixB, int n, operation operation)
 {
     return operation(matrixA, n) > operation(matrixB, n);
 }
