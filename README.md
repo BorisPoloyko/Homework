@@ -36,7 +36,7 @@ Control work [Task 1](https://github.com/BorisPoloyko/Homework/blob/master/task1
  20.02.2019 [Dynamic Array(1)(doubles)](https://github.com/BorisPoloyko/Homework/blob/master/%E2%84%961_20_02_19(1).cpp),
  [Dynamic Array(2)(integers)](https://github.com/BorisPoloyko/Homework/blob/master/%E2%84%961_20_02_19(2).cpp) + Header Files for [Array(doubles)](https://github.com/BorisPoloyko/Homework/blob/master/Array_double.h) and [array(integers)](https://github.com/BorisPoloyko/Homework/blob/master/Array_int.h)
 
-06.03.2019 [LW1](https://github.com/BorisPoloyko/Laboratory-Works/tree/master/Poloyko.2019.LW1).
+06.03.2019 [Array.LW1](https://github.com/BorisPoloyko/Laboratory-Works/tree/master/Poloyko.2019.LW1).
 
 14.03.2019. [Matrix.LW2](https://github.com/BorisPoloyko/Laboratory-Works/tree/master/Poloyko.2019.LW2).
 
