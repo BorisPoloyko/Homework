@@ -38,4 +38,4 @@ Control work [Task 1](https://github.com/BorisPoloyko/Homework/blob/master/task1
 
 06.03.2019 [Dynamic Array (doubles). Variant 10](https://github.com/BorisPoloyko/Homework/blob/master/%E2%84%963_06_03_19(10).cpp)
 
-13.13.2019 [Matrix. Variant 10](https://github.com/BorisPoloyko/Homework/blob/master/matrix.cpp)
+
